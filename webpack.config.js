@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
 const path = require('path');
 const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
@@ -84,7 +85,7 @@ const config = {
     new ForkTsCheckerWebpackPlugin({
       async: false,
       eslint: {
-        files: './src/**/*',
+        files: 'src',
       },
     }),
     htmlWebPackPlugin,
